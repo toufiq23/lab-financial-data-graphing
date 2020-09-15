@@ -1,6 +1,11 @@
 // alert('coucou')
-axios.get('http://api.coindesk.com/v1/bpi/historical/close.json')
+
+const urlApi = 'http://api.coindesk.com/v1/bpi/historical/close.json'
+
+axios.get(`${urlApi}?start=$`)
     .then(response => {
+
+
         console.log('data=', response.data.bpi);
 
 
@@ -25,3 +30,16 @@ axios.get('http://api.coindesk.com/v1/bpi/historical/close.json')
         }
     })
     .catch(err => console.log('💥', err))
+
+function changeDate() {
+    let userInputStart = document.getElementById('start').values
+    let userInputEnd = document.getElementById('end').values
+
+
+}
+
+const start = document.getElementById('start')
+start.addEventListener("change", changeDate)
+
+const end = document.getElementById('end')
+end.addEventListener("change", changeDate)
