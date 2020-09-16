@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title> {{title}} </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1> {{title}} </h1>
+    <p>Welcome to  {{title}} </p>
 
-<head>
-  <title> {{title}} </title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+		<h2>Filters</h2>
+		<span>From: </span>
+		<input type="date" id="start" value="" >
+		<span>To: </span>
+		<input type="date" id="end" value="" >
 
-<body>
-  <h1> {{title}} </h1>
-  <p>Welcome to {{title}} </p>
+		<canvas id="myChart" width="400" height="400"></canvas>
 
-  <input id="start" type="date">
-  <input id="end" type="date">
-
-  <canvas id="my-chart"></canvas>
-
-
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	{{!-- AXIOS CDN --}}
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	{{!-- Chart CDN --}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+	{{!-- My JS --}}
   <script src="/javascripts/financial-data.js" charset="utf-8"></script>
-</body>
-
+  </body>
 </html>
